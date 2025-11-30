@@ -1,0 +1,28 @@
+{
+  "name": "appointment-scheduler",
+  "version": "1.0.0",
+  "description": "appointment scheduler ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveen305/appointment-scheduler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naveen305/appointment-scheduler/issues"
+  },
+  "homepage": "https://github.com/naveen305/appointment-scheduler#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
