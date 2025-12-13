@@ -1,5 +1,7 @@
 // src/app.js
 const express = require("express");
+const slotRoutes = require("./routes/slot.routes");
+
 
 const app = express();
 
@@ -10,6 +12,10 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("CliqCase API running...");
 });
+
+
+app.use("/slots", slotRoutes);
+
 
 app.get("/health", (req, res) => {
   res.send("OK");
