@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const connectDB = require('./config/db');
 const app = express();
 
 // Middleware to parse JSON
@@ -13,6 +14,12 @@ app.get('/', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
+// connect DB first  
+connectDB(process.env.MONGO_URI)
+  .then(() => {
+    const PORT = process.env.PORT || 4000;
+    app.listen(PORT, () => console.log("🚀 Server running on port", PORT));
+  })
+  .catch((err) => {
+    process.exit(1);
+  });
