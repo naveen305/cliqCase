@@ -1,6 +1,6 @@
 // src/app.js
 const express = require("express");
-const slotRoutes = require("./routes/slot.routes");
+const slotRoutes = require("./modules/appointments/routes/slot.routes");
 
 
 const app = express();
