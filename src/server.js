@@ -11,8 +11,6 @@ app.get('/', (req, res) => {
   res.send('CliqCase API running...');
 });
 
-// Start server
-const PORT = process.env.PORT || 3000;
 
 // connect DB first  
 connectDB(process.env.MONGO_URI)
